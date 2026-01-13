@@ -1,0 +1,5 @@
+flask
+chromadb
+python-dotenv
+pypdf2
+requests

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "ryanair-review-analysis",
+    "description": "AI-powered customer review analysis with sentiment detection and natural language querying.",
+    "language": "Python",
+    "stars": 0,
+    "forks": 0,
+    "url": "https://github.com/SarahAljudaibi/ryanair-review-analysis",
+    "created_at": "2025-11-02T11:37:32Z",
+    "updated_at": "2025-12-11T09:20:38Z",
+    "topics": []
+  },
+  {
+    "name": "SarahAljudaibi",
+    "description": null,
+    "language": null,
+    "stars": 0,
+    "forks": 0,
+    "url": "https://github.com/SarahAljudaibi/SarahAljudaibi",
+    "created_at": "2025-12-02T08:33:05Z",
+    "updated_at": "2025-12-10T11:05:38Z",
+    "topics": []
+  },
+  {
+    "name": "Traffic-accidents-Analysis-in-KSA",
+    "description": "Take a look at the number of traffic accidents and driving licenses issued in Saudi Arabia. We'll seek to identify trends in the data",
+    "language": "Jupyter Notebook",
+    "stars": 0,
+    "forks": 0,
+    "url": "https://github.com/SarahAljudaibi/Traffic-accidents-Analysis-in-KSA",
+    "created_at": "2020-06-10T09:55:51Z",
+    "updated_at": "2024-10-23T08:18:58Z",
+    "topics": []
+  },
+  {
+    "name": "Application-of-Time-Series-Forecasting-for-Real-Estate-Valuation",
+    "description": "Developed algorithm with a good performace to forecast the japan's real estate prices ",
+    "language": "Jupyter Notebook",
+    "stars": 0,
+    "forks": 0,
+    "url": "https://github.com/SarahAljudaibi/Application-of-Time-Series-Forecasting-for-Real-Estate-Valuation",
+    "created_at": "2022-09-01T16:04:48Z",
+    "updated_at": "2024-01-26T12:05:00Z",
+    "topics": []
+  },
+  {
+    "name": "House-Prices",
+    "description": null,
+    "language": "Jupyter Notebook",
+    "stars": 0,
+    "forks": 0,
+    "url": "https://github.com/SarahAljudaibi/House-Prices",
+    "created_at": "2020-06-10T10:10:27Z",
+    "updated_at": "2020-06-10T10:16:11Z",
+    "topics": []
+  },
+  {
+    "name": "Titanic-Data",
+    "description": null,
+    "language": "Jupyter Notebook",
+    "stars": 0,
+    "forks": 0,
+    "url": "https://github.com/SarahAljudaibi/Titanic-Data",
+    "created_at": "2020-06-10T10:03:56Z",
+    "updated_at": "2020-06-10T10:08:07Z",
+    "topics": []
+  }
+]
