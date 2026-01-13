@@ -139,7 +139,7 @@ Sarah is a data scientist and AI enthusiast with experience in:
 • Customer review analysis with sentiment detection
 • Traffic accident analysis in Saudi Arabia
 
-Her GitHub showcases various data science projects including:
+Her GitHub & Resmue showcases various data science projects including:
 - Ryanair review analysis with AI-powered sentiment detection
 - Time series forecasting for real estate valuation
 - Traffic accidents analysis in KSA

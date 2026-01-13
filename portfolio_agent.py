@@ -1,69 +1,42 @@
 from portfolio_rag import PortfolioRAG
+from reasoning_agent import ReasoningAgent
 
 class PortfolioAgent:
     def __init__(self):
         self.rag = PortfolioRAG()
+        self.reasoning_agent = ReasoningAgent()
         self.email = "sarahal.jodaiby@gmail.com"
-        self.linkedin = "LinkedIn profile"
+        self.linkedin = "https://www.linkedin.com/in/sarah-aljudaibi/"
     
     def answer_question(self, question):
-        """Answer questions using only portfolio data"""
-        # Search for relevant information
-        search_results = self.rag.search(question, n_results=3)
+        """Main method: RAG retrieves data, Reasoning Agent processes it"""
+        # Step 1: Retrieve relevant data using RAG
+        search_results = self.rag.search(question, n_results=5)
         
-        # Check if we found relevant information
-        if not search_results['documents'][0] or not any(doc.strip() for doc in search_results['documents'][0]):
-            return self._no_info_response()
+        # Step 2: Extract documents from search results
+        retrieved_docs = []
+        if search_results['documents'][0]:
+            retrieved_docs = search_results['documents'][0]
         
-        # Combine relevant documents
-        context = "\n\n".join([doc for doc in search_results['documents'][0] if doc.strip()])
-        
-        # Generate response based on context
-        response = self._generate_response(question, context)
-        return response
-    
-    def _no_info_response(self):
-        """Response when information is not available"""
-        summary = self.rag.get_summary()
-        
-        response = f"""I don't have that information in Sarah's portfolio data.
-
-Here's a summary about Sarah:
-{summary}
-
-For more detailed information, you can contact Sarah at:
-📧 Email: {self.email}
-💼 LinkedIn: Connect with her on LinkedIn
-
-Feel free to reach out directly for any specific questions!"""
-        
-        return response
-    
-    def _generate_response(self, question, context):
-        """Generate response using only the provided context"""
-        question_lower = question.lower()
-        
-        # Determine response type based on question
-        if any(word in question_lower for word in ["experience", "work", "job", "career"]):
-            return f"Based on Sarah's portfolio data:\n\n{context}"
-        
-        elif any(word in question_lower for word in ["skills", "technology", "programming", "tools"]):
-            return f"Sarah's technical skills and technologies:\n\n{context}"
-        
-        elif any(word in question_lower for word in ["projects", "github", "repository", "code"]):
-            return f"Sarah's projects and GitHub work:\n\n{context}"
-        
-        elif any(word in question_lower for word in ["education", "degree", "university", "study"]):
-            return f"Sarah's educational background:\n\n{context}"
-        
-        elif any(word in question_lower for word in ["about", "who", "background", "bio"]):
-            return f"About Sarah:\n\n{context}"
-        
-        elif any(word in question_lower for word in ["contact", "email", "reach", "linkedin"]):
-            return f"Contact Information:\n📧 Email: {self.email}\n💼 LinkedIn: Connect with Sarah on LinkedIn\n\nAdditional info from portfolio:\n{context}"
-        
+        # Step 3: Use Reasoning Agent to analyze and respond
+        if self._is_projects_question(question):
+            response = self.reasoning_agent.extract_projects(retrieved_docs)
+        elif self._is_skills_question(question):
+            response = self.reasoning_agent.extract_skills(retrieved_docs)
         else:
-            return f"Here's what I found in Sarah's portfolio:\n\n{context}"
+            response = self.reasoning_agent.analyze_and_respond(question, retrieved_docs)
+        
+        return response
+    
+    def _is_projects_question(self, question):
+        """Check if question is about projects"""
+        project_keywords = ['project', 'projects', 'work', 'portfolio', 'github', 'repository', 'built', 'developed']
+        return any(keyword in question.lower() for keyword in project_keywords)
+    
+    def _is_skills_question(self, question):
+        """Check if question is about skills"""
+        skill_keywords = ['skill', 'skills', 'technology', 'technologies', 'programming', 'language', 'tool', 'framework']
+        return any(keyword in question.lower() for keyword in skill_keywords)
     
     def chat(self):
         """Interactive chat interface"""
