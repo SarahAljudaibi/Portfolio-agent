@@ -1,6 +1,7 @@
-flask
-chromadb
-python-dotenv
-pypdf2
-requests
-groq
+flask==3.0.0
+chromadb==0.4.22
+pypdf==3.17.4
+python-dotenv==1.0.0
+groq==0.11.0
+sentence-transformers==2.3.1
+httpx==0.24.1
