@@ -109,34 +109,9 @@ portfolio-ai-agent/
 └── README.md                 # This file
 ```
 
-## 🌐 Deployment
-
-### Deploy to Render.com
-
-1. Push code to GitHub
-2. Create new Web Service on [Render](https://render.com)
-3. Connect your repository
-4. Configure:
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `python flask_app.py`
-5. Add environment variable: `GROQ_API_KEY`
-6. Deploy!
-
-Your app will be live at: `https://your-app-name.onrender.com`
-
-## 🔒 Security
-
-- API keys are stored in `.env` files (excluded from Git)
-- Environment variables used for production deployment
-- No sensitive data committed to repository
-
 ## 🤝 Contributing
 
 This is a personal portfolio project, but feel free to fork and adapt for your own use!
-
-## 📄 License
-
-MIT License - Feel free to use this project as inspiration for your own portfolio!
 
 ## 👤 About
 
