@@ -1,0 +1,526 @@
+{
+  "metadata": {
+    "created_date": "2026-01-21T10:41:00.067121",
+    "description": "Sarah's complete portfolio data",
+    "data_sources": [
+      "AI project",
+      "other projects",
+      "skills "
+    ]
+  },
+  "ai_projects": [
+    {
+      "id": "AI project_0",
+      "data": {
+        "Project Name": "Mutarjim",
+        "Domain": "GenAI / NLP",
+        "Description": "Uses GPT-4o ffor translating Arabic ↔ English translation. Preprocessing ensures clean document handling and custimized format, and the system can translate large files in seconds with optimized pipelines for speed and scalability.",
+        "Key Technologies": "GPT, RAG, Python"
+      },
+      "metadata": {
+        "sheet": "AI project",
+        "row_index": 0,
+        "keywords": [
+          "system",
+          "python",
+          "ai"
+        ],
+        "searchable_text": "Mutarjim GenAI / NLP Uses GPT-4o ffor translating Arabic ↔ English translation. Preprocessing ensures clean document handling and custimized format, and the system can translate large files in seconds with optimized pipelines for speed and scalability. GPT, RAG, Python",
+        "category": "ai_projects"
+      }
+    },
+    {
+      "id": "AI project_1",
+      "data": {
+        "Project Name": "Customer Journey AI",
+        "Domain": "GenAI",
+        "Description": "Sentiment analysis & multi-agent system for customer feedback",
+        "Key Technologies": "LLM, RAG, agents"
+      },
+      "metadata": {
+        "sheet": "AI project",
+        "row_index": 1,
+        "keywords": [
+          "analysis",
+          "system",
+          "ai"
+        ],
+        "searchable_text": "Customer Journey AI GenAI Sentiment analysis & multi-agent system for customer feedback LLM, RAG, agents",
+        "category": "ai_projects"
+      }
+    },
+    {
+      "id": "AI project_2",
+      "data": {
+        "Project Name": "Red Sea Fish Classification",
+        "Domain": "Computer Vision",
+        "Description": "This study focuses on fish species detection and classification in the Arabian Gulf using Convolutional Neural Networks (CNNs). The dataset consists of underwater images of seven fish species captured from videos in challenging conditions such as low luminosity, turbid water, and complex backgrounds. The research addresses issues like class imbalance, feature variance, and environmental noise by employing advanced optimization techniques and data augmentation strategies",
+        "Key Technologies": " a hybrid CNN approach combined with three hyperparameter optimization techniques:\nBayesian Optimization\nHyperband Optimization\nGenetic Algorithm Optimization\n\nAdditionally, class weighting and data augmentation were applied to improve performance on imbalanced datasets\nDeep Learning Frameworks:\nThe models were evaluated against a traditional CNN baseline.\n"
+      },
+      "metadata": {
+        "sheet": "AI project",
+        "row_index": 2,
+        "keywords": [
+          "neural network",
+          "app",
+          "model",
+          "ai",
+          "classification",
+          "deep learning"
+        ],
+        "searchable_text": "Red Sea Fish Classification Computer Vision This study focuses on fish species detection and classification in the Arabian Gulf using Convolutional Neural Networks (CNNs). The dataset consists of underwater images of seven fish species captured from videos in challenging conditions such as low luminosity, turbid water, and complex backgrounds. The research addresses issues like class imbalance, feature variance, and environmental noise by employing advanced optimization techniques and data augmentation strategies  a hybrid CNN approach combined with three hyperparameter optimization techniques:\nBayesian Optimization\nHyperband Optimization\nGenetic Algorithm Optimization\n\nAdditionally, class weighting and data augmentation were applied to improve performance on imbalanced datasets\nDeep Learning Frameworks:\nThe models were evaluated against a traditional CNN baseline.",
+        "category": "ai_projects"
+      }
+    },
+    {
+      "id": "AI project_3",
+      "data": {
+        "Project Name": "Ryanair review analysis",
+        "Domain": "GenAI",
+        "Description": "AI-powered customer review analysis with sentiment detection and natural language querying.\nChat-based review analysis, Sentiment dashboard, Natural language to SQL queries& Multi-tab chat interface",
+        "Key Technologies": "Frontend: Streamlit\nAI Model: Ollama Llama 3.2\nDatabase: PostgreSQL\nLanguage: Python"
+      },
+      "metadata": {
+        "sheet": "AI project",
+        "row_index": 3,
+        "keywords": [
+          "sql",
+          "analysis",
+          "model",
+          "dashboard",
+          "python",
+          "ai",
+          "postgresql",
+          "database"
+        ],
+        "searchable_text": "Ryanair review analysis GenAI AI-powered customer review analysis with sentiment detection and natural language querying.\nChat-based review analysis, Sentiment dashboard, Natural language to SQL queries& Multi-tab chat interface Frontend: Streamlit\nAI Model: Ollama Llama 3.2\nDatabase: PostgreSQL\nLanguage: Python",
+        "category": "ai_projects"
+      }
+    },
+    {
+      "id": "AI project_4",
+      "data": {
+        "Project Name": "Traffic Accidents Analysis in ksa",
+        "Domain": "Data Anysis",
+        "Description": "The Problem Statment:\nfirst project in data scientist: we're going to take a look at the number of traffic accidents and driving licenses issued in Saudi Arabia. We'll seek to identify trends in the data and combine our data analysis with outside research to identify likely factors influencing the outcomes of traffic accidents in the various regions in Saudi Arabia.\nDatasets:\nTraffic Accidents dataFrame\nDriving License dataframe\nAccidents Details 2016 and 2017 dataframes",
+        "Key Technologies": "\nbasic statistics (distributions, confidence intervals, hypothesis testing)\nmany Python programming concepts\nvisualizations\nEDA"
+      },
+      "metadata": {
+        "sheet": "AI project",
+        "row_index": 4,
+        "keywords": [
+          "analysis",
+          "visualization",
+          "python",
+          "ai"
+        ],
+        "searchable_text": "Traffic Accidents Analysis in ksa Data Anysis The Problem Statment:\nfirst project in data scientist: we're going to take a look at the number of traffic accidents and driving licenses issued in Saudi Arabia. We'll seek to identify trends in the data and combine our data analysis with outside research to identify likely factors influencing the outcomes of traffic accidents in the various regions in Saudi Arabia.\nDatasets:\nTraffic Accidents dataFrame\nDriving License dataframe\nAccidents Details 2016 and 2017 dataframes \nbasic statistics (distributions, confidence intervals, hypothesis testing)\nmany Python programming concepts\nvisualizations\nEDA",
+        "category": "ai_projects"
+      }
+    },
+    {
+      "id": "AI project_5",
+      "data": {
+        "Project Name": "Application-of-Time-Series-Forecasting-for-Real-Estate-Valuation",
+        "Domain": "Time Series",
+        "Description": "In the past years real estate Trades Prices in Japan's have been rising up and down,affected by the economic market. The main challenge here is to determine the future value of the property after a certain period of time, taking into account various expected factors such as the effects of the current pandemic to the future results.\n\nWe will build a time series forecasting model to forecast the property average prices based on historical data of all the 47 prefectures in Japan. Using time series Algorithms will help us to understand the characteristics and the statistics of the real estate data.\n\nThis work is organize to 3 notebook files:\n\nNotebook 1: EDA & Feature Engineering.\nNotebook 2: Static Modeling for Producing Time Series.\nNotebook 2: Mean-Point Time Series Modeling.\n\nusing Tokyo prefecture data provided by by Ministry of Land, Infrastructure, Transport and Tourism of Japan (MLIT) with addition to the housing consumer price index for japan data, we introduce two approaches:\n\nFirst Static Modeling for Producing Time Series:\n\nFor every quarter we produced static models. Then predict the price of an instance, using all quarter models. The result is a predicted time series data which will then be forecasted into the future using an LSTM without the timestamp features ['Year','Quarter'].\n\nSecond Mean-Point Time Series Modeling:\n\nThe pipeline of this approach is built to take an instance X, and produce a time series output from the full dataset that best represent X with the Mean Point Scheme Function. The time series data is then forecasted using baseline models ARIMAX & SARIMAX and the LSTM model.",
+        "Key Technologies": "ARIMAX &SARIMAX, LSTM"
+      },
+      "metadata": {
+        "sheet": "AI project",
+        "row_index": 5,
+        "keywords": [
+          "real estate",
+          "model",
+          "app",
+          "notebook",
+          "application",
+          "ai"
+        ],
+        "searchable_text": "Application-of-Time-Series-Forecasting-for-Real-Estate-Valuation Time Series In the past years real estate Trades Prices in Japan's have been rising up and down,affected by the economic market. The main challenge here is to determine the future value of the property after a certain period of time, taking into account various expected factors such as the effects of the current pandemic to the future results.\n\nWe will build a time series forecasting model to forecast the property average prices based on historical data of all the 47 prefectures in Japan. Using time series Algorithms will help us to understand the characteristics and the statistics of the real estate data.\n\nThis work is organize to 3 notebook files:\n\nNotebook 1: EDA & Feature Engineering.\nNotebook 2: Static Modeling for Producing Time Series.\nNotebook 2: Mean-Point Time Series Modeling.\n\nusing Tokyo prefecture data provided by by Ministry of Land, Infrastructure, Transport and Tourism of Japan (MLIT) with addition to the housing consumer price index for japan data, we introduce two approaches:\n\nFirst Static Modeling for Producing Time Series:\n\nFor every quarter we produced static models. Then predict the price of an instance, using all quarter models. The result is a predicted time series data which will then be forecasted into the future using an LSTM without the timestamp features ['Year','Quarter'].\n\nSecond Mean-Point Time Series Modeling:\n\nThe pipeline of this approach is built to take an instance X, and produce a time series output from the full dataset that best represent X with the Mean Point Scheme Function. The time series data is then forecasted using baseline models ARIMAX & SARIMAX and the LSTM model. ARIMAX &SARIMAX, LSTM",
+        "category": "ai_projects"
+      }
+    },
+    {
+      "id": "AI project_6",
+      "data": {
+        "Project Name": "Safety CCTV Detection",
+        "Domain": "Computer Vision",
+        "Description": "web scraping for different use cases related to the safety of sites such as:Personal Protective Equipment (PPE) Compliance, Restricted Area Monitoring, Proximity to Heavy Machinery, Slip and Trip Hazard Detection, and Safe Distancing Compliance  , annotation, yolo training for customized data, deployed the model and test in in real scenarios",
+        "Key Technologies": "Yolo, customized algorthim, customized zone algorithm, depth algorthim "
+      },
+      "metadata": {
+        "sheet": "AI project",
+        "row_index": 6,
+        "keywords": [
+          "web",
+          "model",
+          "api",
+          "scraping",
+          "ai",
+          "rest"
+        ],
+        "searchable_text": "Safety CCTV Detection Computer Vision web scraping for different use cases related to the safety of sites such as:Personal Protective Equipment (PPE) Compliance, Restricted Area Monitoring, Proximity to Heavy Machinery, Slip and Trip Hazard Detection, and Safe Distancing Compliance  , annotation, yolo training for customized data, deployed the model and test in in real scenarios Yolo, customized algorthim, customized zone algorithm, depth algorthim",
+        "category": "ai_projects"
+      }
+    },
+    {
+      "id": "AI project_7",
+      "data": {
+        "Project Name": "Fruit-date Detection ",
+        "Domain": "Computer Vision",
+        "Description": "Solve manual dates grading in factories, by building an CV model to detect the grade (quality) of dates for three types (Ajwah, Mabroom, Sukkary)  based on key features: Key features analyzed include color (using RGB values), size (via least-squares fitting ellipse), and texture (using Weber local descriptor) \nThree classifiers were tested: k-nearest neighbor (KNN), support vector machine (SVM), and convolutional neural network (CNN).",
+        "Key Technologies": "KNN, SVM, and CNN models. "
+      },
+      "metadata": {
+        "sheet": "AI project",
+        "row_index": 7,
+        "keywords": [
+          "web",
+          "rest",
+          "neural network",
+          "model"
+        ],
+        "searchable_text": "Fruit-date Detection  Computer Vision Solve manual dates grading in factories, by building an CV model to detect the grade (quality) of dates for three types (Ajwah, Mabroom, Sukkary)  based on key features: Key features analyzed include color (using RGB values), size (via least-squares fitting ellipse), and texture (using Weber local descriptor) \nThree classifiers were tested: k-nearest neighbor (KNN), support vector machine (SVM), and convolutional neural network (CNN). KNN, SVM, and CNN models.",
+        "category": "ai_projects"
+      }
+    }
+  ],
+  "other_projects": [
+    {
+      "id": "other projects_0",
+      "data": {
+        "Project Name": "Center Efficiency Enhancement Platform",
+        "Domain": "Business Process Automation",
+        "Description": "Designed and implemented automated workflows to streamline data processes and improve operational efficiency between different department (HR,Admin, Finance,marketing)",
+        "Tech Skills ": "SharePoint, Microsoft Power Automate, Microsoft Power Apps, Microsoft Excel",
+        "Soft Skills ": "Cross-Functional Collaboration, Process Automation Thinking, Problem Solving, Requirements Analysis, Communication, Training"
+      },
+      "metadata": {
+        "sheet": "other projects",
+        "row_index": 0,
+        "keywords": [
+          "analysis",
+          "marketing",
+          "app",
+          "platform",
+          "excel",
+          "automation",
+          "ai",
+          "finance"
+        ],
+        "searchable_text": "Center Efficiency Enhancement Platform Business Process Automation Designed and implemented automated workflows to streamline data processes and improve operational efficiency between different department (HR,Admin, Finance,marketing) SharePoint, Microsoft Power Automate, Microsoft Power Apps, Microsoft Excel Cross-Functional Collaboration, Process Automation Thinking, Problem Solving, Requirements Analysis, Communication, Training",
+        "category": "other_projects"
+      }
+    },
+    {
+      "id": "other projects_1",
+      "data": {
+        "Project Name": "Interactive Data Analytics Dashboard (Python-Based)",
+        "Domain": "Data Analytics / Business Intelligence / Data Visualization",
+        "Description": "Developed an interactive Python-based dashboard to enhance data visualization and support faster decision-making.",
+        "Tech Skills ": "Python, Pandas, NumPy, Plotly, Jupyter Notebook",
+        "Soft Skills ": "Analytical Thinking, Data Visualization, Attention to Detail, User-Focused Design, Presentation Skills"
+      },
+      "metadata": {
+        "sheet": "other projects",
+        "row_index": 1,
+        "keywords": [
+          "jupyter",
+          "visualization",
+          "analytics",
+          "notebook",
+          "python",
+          "pandas",
+          "ai",
+          "numpy",
+          "dashboard"
+        ],
+        "searchable_text": "Interactive Data Analytics Dashboard (Python-Based) Data Analytics / Business Intelligence / Data Visualization Developed an interactive Python-based dashboard to enhance data visualization and support faster decision-making. Python, Pandas, NumPy, Plotly, Jupyter Notebook Analytical Thinking, Data Visualization, Attention to Detail, User-Focused Design, Presentation Skills",
+        "category": "other_projects"
+      }
+    },
+    {
+      "id": "other projects_2",
+      "data": {
+        "Project Name": "GiKS 2024",
+        "Domain": "Academic Event Management / Leadership & Coordination",
+        "Description": "Coordinated scientific review and conference organization activities as a key member of the GiKS 2024 committee.\nled the initial setup by establishing core organizational frameworks, developing reference guidelines, and preparing standardized documentation to ensure efficient planning and continuity for future editions.",
+        "Tech Skills ": "Email Platforms, Conference Management Tools, Microsoft Excel",
+        "Soft Skills ": "Leadership, Event Coordination, Team Management, Decision Making, Professional Communication"
+      },
+      "metadata": {
+        "sheet": "other projects",
+        "row_index": 2,
+        "keywords": [
+          "excel",
+          "ai",
+          "platform"
+        ],
+        "searchable_text": "GiKS 2024 Academic Event Management / Leadership & Coordination Coordinated scientific review and conference organization activities as a key member of the GiKS 2024 committee.\nled the initial setup by establishing core organizational frameworks, developing reference guidelines, and preparing standardized documentation to ensure efficient planning and continuity for future editions. Email Platforms, Conference Management Tools, Microsoft Excel Leadership, Event Coordination, Team Management, Decision Making, Professional Communication",
+        "category": "other_projects"
+      }
+    },
+    {
+      "id": "other projects_3",
+      "data": {
+        "Project Name": "Project Management Dashboard",
+        "Domain": "Project & Research Management and ",
+        "Description": "Built and developed from scratch a platform that met the research center’s requirements and centralized data management, enabling secure document storage and retrieval in one place. The system implemented role-based user authentication within projects, allowing users to upload research outputs and annual work reports and respond to project managers. The website also enabled tracking of instruments and transportation assets, including usage history, assigned users, and availability timelines. Additionally, the platform automated key workflows, including approval processes, and supported management leads in conducting end-of-year PMP evaluations.",
+        "Tech Skills ": "HTML, CSS, Bootstrap Javascript, Microsoft SQL Server",
+        "Soft Skills ": "Cross-Functional Collaboration, Requirements Gathering & Stakeholder Management, Problem Solving, Process Automation & Optimization, Analytical Thinking, Attention to Detail, Communication & Documentation, Time Management, Ownership & Initiative, Adaptability"
+      },
+      "metadata": {
+        "sheet": "other projects",
+        "row_index": 3,
+        "keywords": [
+          "web",
+          "bootstrap",
+          "sql",
+          "platform",
+          "javascript",
+          "css",
+          "app",
+          "html",
+          "automation",
+          "ai",
+          "transportation",
+          "website",
+          "dashboard",
+          "java",
+          "system"
+        ],
+        "searchable_text": "Project Management Dashboard Project & Research Management and  Built and developed from scratch a platform that met the research center’s requirements and centralized data management, enabling secure document storage and retrieval in one place. The system implemented role-based user authentication within projects, allowing users to upload research outputs and annual work reports and respond to project managers. The website also enabled tracking of instruments and transportation assets, including usage history, assigned users, and availability timelines. Additionally, the platform automated key workflows, including approval processes, and supported management leads in conducting end-of-year PMP evaluations. HTML, CSS, Bootstrap Javascript, Microsoft SQL Server Cross-Functional Collaboration, Requirements Gathering & Stakeholder Management, Problem Solving, Process Automation & Optimization, Analytical Thinking, Attention to Detail, Communication & Documentation, Time Management, Ownership & Initiative, Adaptability",
+        "category": "other_projects"
+      }
+    },
+    {
+      "id": "other projects_4",
+      "data": {
+        "Project Name": "KPI Analysis & Dashboard",
+        "Domain": "Busniess Analytics/ Data Visualization/ Database Management ",
+        "Description": "Collected KPIs, automated analysis, and built an integrated dashboard and database for streamlined reporting and real-time insights",
+        "Tech Skills ": "Microsoft Excel, Power BI",
+        "Soft Skills ": "Analytical Thinking,  Communication (with clients/stakeholders), Process Optimization, Collaboration / Teamwork, Time Management"
+      },
+      "metadata": {
+        "sheet": "other projects",
+        "row_index": 4,
+        "keywords": [
+          "analysis",
+          "visualization",
+          "analytics",
+          "excel",
+          "dashboard",
+          "power bi",
+          "database"
+        ],
+        "searchable_text": "KPI Analysis & Dashboard Busniess Analytics/ Data Visualization/ Database Management  Collected KPIs, automated analysis, and built an integrated dashboard and database for streamlined reporting and real-time insights Microsoft Excel, Power BI Analytical Thinking,  Communication (with clients/stakeholders), Process Optimization, Collaboration / Teamwork, Time Management",
+        "category": "other_projects"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "skills _0",
+      "data": {
+        "Category": "Programming Languages",
+        "Skills": "Python, SQL, R, HTML, CSS, Bootstrap, JavaScript"
+      },
+      "metadata": {
+        "sheet": "skills ",
+        "row_index": 0,
+        "keywords": [
+          "bootstrap",
+          "sql",
+          "javascript",
+          "css",
+          "html",
+          "python",
+          "java"
+        ],
+        "searchable_text": "Programming Languages Python, SQL, R, HTML, CSS, Bootstrap, JavaScript",
+        "category": "skills"
+      }
+    },
+    {
+      "id": "skills _1",
+      "data": {
+        "Category": "Machine Learning Problems",
+        "Skills": "Classification, Regression, Computer Vision, Time Series Analysis, Natual Language Proceesing (NLP), Large Language Models (LLMs), Generation AI,"
+      },
+      "metadata": {
+        "sheet": "skills ",
+        "row_index": 1,
+        "keywords": [
+          "analysis",
+          "model",
+          "ai",
+          "machine learning",
+          "classification"
+        ],
+        "searchable_text": "Machine Learning Problems Classification, Regression, Computer Vision, Time Series Analysis, Natual Language Proceesing (NLP), Large Language Models (LLMs), Generation AI,",
+        "category": "skills"
+      }
+    },
+    {
+      "id": "skills _2",
+      "data": {
+        "Category": "Data Processing",
+        "Skills": "Data Collection (APIs, Web Scraping), Data Cleaning, Image Processing, Data Transformation, ETL (Extract, Transform, Load), Data Integration"
+      },
+      "metadata": {
+        "sheet": "skills ",
+        "row_index": 2,
+        "keywords": [
+          "web",
+          "api",
+          "scraping"
+        ],
+        "searchable_text": "Data Processing Data Collection (APIs, Web Scraping), Data Cleaning, Image Processing, Data Transformation, ETL (Extract, Transform, Load), Data Integration",
+        "category": "skills"
+      }
+    },
+    {
+      "id": "skills _3",
+      "data": {
+        "Category": "Data Analytics",
+        "Skills": "Python (Data Analytics libraries), Power BI, Tableau"
+      },
+      "metadata": {
+        "sheet": "skills ",
+        "row_index": 3,
+        "keywords": [
+          "power bi",
+          "python",
+          "tableau",
+          "analytics"
+        ],
+        "searchable_text": "Data Analytics Python (Data Analytics libraries), Power BI, Tableau",
+        "category": "skills"
+      }
+    },
+    {
+      "id": "skills _4",
+      "data": {
+        "Category": "Model Development Libraries",
+        "Skills": "Pytorch, Ultralytics(YOLO), Groq,  OpenAI’s GPT (via OpenAI API), Ollama, Hugging Face, TensorFlow, Keras, Scikit-learn"
+      },
+      "metadata": {
+        "sheet": "skills ",
+        "row_index": 4,
+        "keywords": [
+          "model",
+          "api",
+          "scikit-learn",
+          "pytorch",
+          "ai",
+          "tensorflow"
+        ],
+        "searchable_text": "Model Development Libraries Pytorch, Ultralytics(YOLO), Groq,  OpenAI’s GPT (via OpenAI API), Ollama, Hugging Face, TensorFlow, Keras, Scikit-learn",
+        "category": "skills"
+      }
+    },
+    {
+      "id": "skills _5",
+      "data": {
+        "Category": "Data Processing & Visualization Libraries",
+        "Skills": "Pandas, NumPy, OpenCV, Matplotlib, Seaborn, Plotly"
+      },
+      "metadata": {
+        "sheet": "skills ",
+        "row_index": 5,
+        "keywords": [
+          "visualization",
+          "numpy",
+          "pandas"
+        ],
+        "searchable_text": "Data Processing & Visualization Libraries Pandas, NumPy, OpenCV, Matplotlib, Seaborn, Plotly",
+        "category": "skills"
+      }
+    },
+    {
+      "id": "skills _6",
+      "data": {
+        "Category": "Tools & Platforms",
+        "Skills": "Jupyter Notebooks, Google Colab, Visual Studio, AWS (Model Deployment)"
+      },
+      "metadata": {
+        "sheet": "skills ",
+        "row_index": 6,
+        "keywords": [
+          "jupyter",
+          "platform",
+          "model",
+          "aws",
+          "notebook"
+        ],
+        "searchable_text": "Tools & Platforms Jupyter Notebooks, Google Colab, Visual Studio, AWS (Model Deployment)",
+        "category": "skills"
+      }
+    },
+    {
+      "id": "skills _7",
+      "data": {
+        "Category": "Framework & Deployment",
+        "Skills": " Flask, Streamlit, Render"
+      },
+      "metadata": {
+        "sheet": "skills ",
+        "row_index": 7,
+        "keywords": [
+          "flask"
+        ],
+        "searchable_text": "Framework & Deployment  Flask, Streamlit, Render",
+        "category": "skills"
+      }
+    }
+  ],
+  "all_keywords": [
+    "web",
+    "sql",
+    "platform",
+    "neural network",
+    "css",
+    "model",
+    "scikit-learn",
+    "scraping",
+    "notebook",
+    "excel",
+    "python",
+    "postgresql",
+    "finance",
+    "database",
+    "tensorflow",
+    "visualization",
+    "ai",
+    "website",
+    "power bi",
+    "marketing",
+    "app",
+    "real estate",
+    "analytics",
+    "automation",
+    "pytorch",
+    "rest",
+    "transportation",
+    "machine learning",
+    "java",
+    "deep learning",
+    "bootstrap",
+    "analysis",
+    "jupyter",
+    "javascript",
+    "api",
+    "tableau",
+    "html",
+    "aws",
+    "flask",
+    "application",
+    "pandas",
+    "numpy",
+    "dashboard",
+    "classification",
+    "system"
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "sheet_name": "other projects",
+    "source_file": "data/AI projects.xlsx",
+    "created_date": "2026-01-21T10:41:00.056060",
+    "total_records": 5,
+    "columns": [
+      "Project Name",
+      "Domain",
+      "Description",
+      "Tech Skills ",
+      "Soft Skills "
+    ],
+    "data_type": "projects"
+  },
+  "records": [
+    {
+      "id": "other projects_0",
+      "data": {
+        "Project Name": "Center Efficiency Enhancement Platform",
+        "Domain": "Business Process Automation",
+        "Description": "Designed and implemented automated workflows to streamline data processes and improve operational efficiency between different department (HR,Admin, Finance,marketing)",
+        "Tech Skills ": "SharePoint, Microsoft Power Automate, Microsoft Power Apps, Microsoft Excel",
+        "Soft Skills ": "Cross-Functional Collaboration, Process Automation Thinking, Problem Solving, Requirements Analysis, Communication, Training"
+      },
+      "metadata": {
+        "sheet": "other projects",
+        "row_index": 0,
+        "keywords": [
+          "analysis",
+          "marketing",
+          "app",
+          "platform",
+          "excel",
+          "automation",
+          "ai",
+          "finance"
+        ],
+        "searchable_text": "Center Efficiency Enhancement Platform Business Process Automation Designed and implemented automated workflows to streamline data processes and improve operational efficiency between different department (HR,Admin, Finance,marketing) SharePoint, Microsoft Power Automate, Microsoft Power Apps, Microsoft Excel Cross-Functional Collaboration, Process Automation Thinking, Problem Solving, Requirements Analysis, Communication, Training",
+        "category": "other_projects"
+      }
+    },
+    {
+      "id": "other projects_1",
+      "data": {
+        "Project Name": "Interactive Data Analytics Dashboard (Python-Based)",
+        "Domain": "Data Analytics / Business Intelligence / Data Visualization",
+        "Description": "Developed an interactive Python-based dashboard to enhance data visualization and support faster decision-making.",
+        "Tech Skills ": "Python, Pandas, NumPy, Plotly, Jupyter Notebook",
+        "Soft Skills ": "Analytical Thinking, Data Visualization, Attention to Detail, User-Focused Design, Presentation Skills"
+      },
+      "metadata": {
+        "sheet": "other projects",
+        "row_index": 1,
+        "keywords": [
+          "jupyter",
+          "visualization",
+          "analytics",
+          "notebook",
+          "python",
+          "pandas",
+          "ai",
+          "numpy",
+          "dashboard"
+        ],
+        "searchable_text": "Interactive Data Analytics Dashboard (Python-Based) Data Analytics / Business Intelligence / Data Visualization Developed an interactive Python-based dashboard to enhance data visualization and support faster decision-making. Python, Pandas, NumPy, Plotly, Jupyter Notebook Analytical Thinking, Data Visualization, Attention to Detail, User-Focused Design, Presentation Skills",
+        "category": "other_projects"
+      }
+    },
+    {
+      "id": "other projects_2",
+      "data": {
+        "Project Name": "GiKS 2024",
+        "Domain": "Academic Event Management / Leadership & Coordination",
+        "Description": "Coordinated scientific review and conference organization activities as a key member of the GiKS 2024 committee.\nled the initial setup by establishing core organizational frameworks, developing reference guidelines, and preparing standardized documentation to ensure efficient planning and continuity for future editions.",
+        "Tech Skills ": "Email Platforms, Conference Management Tools, Microsoft Excel",
+        "Soft Skills ": "Leadership, Event Coordination, Team Management, Decision Making, Professional Communication"
+      },
+      "metadata": {
+        "sheet": "other projects",
+        "row_index": 2,
+        "keywords": [
+          "excel",
+          "ai",
+          "platform"
+        ],
+        "searchable_text": "GiKS 2024 Academic Event Management / Leadership & Coordination Coordinated scientific review and conference organization activities as a key member of the GiKS 2024 committee.\nled the initial setup by establishing core organizational frameworks, developing reference guidelines, and preparing standardized documentation to ensure efficient planning and continuity for future editions. Email Platforms, Conference Management Tools, Microsoft Excel Leadership, Event Coordination, Team Management, Decision Making, Professional Communication",
+        "category": "other_projects"
+      }
+    },
+    {
+      "id": "other projects_3",
+      "data": {
+        "Project Name": "Project Management Dashboard",
+        "Domain": "Project & Research Management and ",
+        "Description": "Built and developed from scratch a platform that met the research center’s requirements and centralized data management, enabling secure document storage and retrieval in one place. The system implemented role-based user authentication within projects, allowing users to upload research outputs and annual work reports and respond to project managers. The website also enabled tracking of instruments and transportation assets, including usage history, assigned users, and availability timelines. Additionally, the platform automated key workflows, including approval processes, and supported management leads in conducting end-of-year PMP evaluations.",
+        "Tech Skills ": "HTML, CSS, Bootstrap Javascript, Microsoft SQL Server",
+        "Soft Skills ": "Cross-Functional Collaboration, Requirements Gathering & Stakeholder Management, Problem Solving, Process Automation & Optimization, Analytical Thinking, Attention to Detail, Communication & Documentation, Time Management, Ownership & Initiative, Adaptability"
+      },
+      "metadata": {
+        "sheet": "other projects",
+        "row_index": 3,
+        "keywords": [
+          "web",
+          "bootstrap",
+          "sql",
+          "platform",
+          "javascript",
+          "css",
+          "app",
+          "html",
+          "automation",
+          "ai",
+          "transportation",
+          "website",
+          "dashboard",
+          "java",
+          "system"
+        ],
+        "searchable_text": "Project Management Dashboard Project & Research Management and  Built and developed from scratch a platform that met the research center’s requirements and centralized data management, enabling secure document storage and retrieval in one place. The system implemented role-based user authentication within projects, allowing users to upload research outputs and annual work reports and respond to project managers. The website also enabled tracking of instruments and transportation assets, including usage history, assigned users, and availability timelines. Additionally, the platform automated key workflows, including approval processes, and supported management leads in conducting end-of-year PMP evaluations. HTML, CSS, Bootstrap Javascript, Microsoft SQL Server Cross-Functional Collaboration, Requirements Gathering & Stakeholder Management, Problem Solving, Process Automation & Optimization, Analytical Thinking, Attention to Detail, Communication & Documentation, Time Management, Ownership & Initiative, Adaptability",
+        "category": "other_projects"
+      }
+    },
+    {
+      "id": "other projects_4",
+      "data": {
+        "Project Name": "KPI Analysis & Dashboard",
+        "Domain": "Busniess Analytics/ Data Visualization/ Database Management ",
+        "Description": "Collected KPIs, automated analysis, and built an integrated dashboard and database for streamlined reporting and real-time insights",
+        "Tech Skills ": "Microsoft Excel, Power BI",
+        "Soft Skills ": "Analytical Thinking,  Communication (with clients/stakeholders), Process Optimization, Collaboration / Teamwork, Time Management"
+      },
+      "metadata": {
+        "sheet": "other projects",
+        "row_index": 4,
+        "keywords": [
+          "analysis",
+          "visualization",
+          "analytics",
+          "excel",
+          "dashboard",
+          "power bi",
+          "database"
+        ],
+        "searchable_text": "KPI Analysis & Dashboard Busniess Analytics/ Data Visualization/ Database Management  Collected KPIs, automated analysis, and built an integrated dashboard and database for streamlined reporting and real-time insights Microsoft Excel, Power BI Analytical Thinking,  Communication (with clients/stakeholders), Process Optimization, Collaboration / Teamwork, Time Management",
+        "category": "other_projects"
+      }
+    }
+  ]
+}

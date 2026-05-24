@@ -1,78 +1,211 @@
 from portfolio_rag import PortfolioRAG
+from reasoning_agent import ReasoningAgent
 
 class PortfolioAgent:
     def __init__(self):
         self.rag = PortfolioRAG()
+        self.reasoning_agent = ReasoningAgent()
         self.email = "sarahal.jodaiby@gmail.com"
-        self.linkedin = "LinkedIn profile"
+        self.linkedin = "https://www.linkedin.com/in/sarah-aljudaibi/"
     
-    def answer_question(self, question):
-        """Answer questions using only portfolio data"""
-        # Search for relevant information
-        search_results = self.rag.search(question, n_results=3)
+    def answer_question(self, question, history=None):
+        """Enhanced question answering with progressive retrieval"""
+        history = history or []
+        # Step 1: Detect intent and use appropriate retrieval strategy
+        intent = self._detect_intent(question)
         
-        # Check if we found relevant information
-        if not search_results['documents'][0] or not any(doc.strip() for doc in search_results['documents'][0]):
-            return self._no_info_response()
+        # Step 2: Progressive retrieval based on intent
+        if intent == "projects":
+            search_results = self._get_projects_data(question)
+        elif intent == "skills":
+            search_results = self._get_skills_data(question)
+        elif intent == "skills_specific":
+            search_results = self._get_skills_data(question)
+        elif intent == "github":
+            search_results = self._get_github_data(question)
+        elif intent == "experience":
+            search_results = self._get_experience_data(question)
+        else:
+            # General search with enhanced retrieval
+            search_results = self.rag.search(question, n_results=8)
         
-        # Combine relevant documents
-        context = "\n\n".join([doc for doc in search_results['documents'][0] if doc.strip()])
+        # Step 3: Extract documents from search results
+        retrieved_docs = []
+        if search_results and search_results.get('documents') and search_results['documents'][0]:
+            retrieved_docs = search_results['documents'][0]
         
-        # Generate response based on context
-        response = self._generate_response(question, context)
+        # Step 4: Fallback if no relevant docs found
+        if not retrieved_docs:
+            retrieved_docs = self._fallback_retrieval(question)
+        
+        # Step 5: Use Reasoning Agent to analyze and respond
+        if intent == "projects":
+            response = self.reasoning_agent.extract_projects(retrieved_docs, history)
+        elif intent == "skills":
+            response = self.reasoning_agent.extract_skills(retrieved_docs, history, question=None)
+        elif intent == "skills_specific":
+            response = self.reasoning_agent.extract_skills(retrieved_docs, history, question=question)
+        else:
+            response = self.reasoning_agent.analyze_and_respond(question, retrieved_docs, history)
+        
+        # Step 6: Add contact info if relevant
+        if self._should_add_contact(question):
+            response += f"\n\n📧 Contact: {self.email}\n🔗 LinkedIn: {self.linkedin}"
+        
         return response
     
-    def _no_info_response(self):
-        """Response when information is not available"""
-        summary = self.rag.get_summary()
-        
-        response = f"""I don't have that information in Sarah's portfolio data.
-
-Here's a summary about Sarah:
-{summary}
-
-For more detailed information, you can contact Sarah at:
-📧 Email: {self.email}
-💼 LinkedIn: Connect with her on LinkedIn
-
-Feel free to reach out directly for any specific questions!"""
-        
-        return response
-    
-    def _generate_response(self, question, context):
-        """Generate response using only the provided context"""
+    def _detect_intent(self, question):
+        """Soft intent detection (not hard routing)"""
         question_lower = question.lower()
         
-        # Determine response type based on question
-        if any(word in question_lower for word in ["experience", "work", "job", "career"]):
-            return f"Based on Sarah's portfolio data:\n\n{context}"
+        # Project-related keywords
+        project_keywords = ['project', 'projects', 'work', 'portfolio', 'built', 'developed', 'created', 'github', 'repository', 'repo']
+        if any(keyword in question_lower for keyword in project_keywords):
+            if any(word in question_lower for word in ['github', 'repository', 'repo']):
+                return "github"
+            return "projects"
         
-        elif any(word in question_lower for word in ["skills", "technology", "programming", "tools"]):
-            return f"Sarah's technical skills and technologies:\n\n{context}"
+        # Specific tool/library/domain names — route to focused skill lookup
+        specific_tool_keywords = [
+            'python', 'sql', 'html', 'css', 'javascript', 'bootstrap',
+            'pytorch', 'tensorflow', 'keras', 'scikit', 'sklearn', 'hugging face', 'huggingface',
+            'openai', 'groq', 'ollama', 'yolo', 'ultralytics',
+            'pandas', 'numpy', 'opencv', 'matplotlib', 'seaborn', 'plotly',
+            'power bi', 'tableau', 'flask', 'streamlit', 'render',
+            'jupyter', 'colab', 'aws', 'visual studio',
+            'nlp', 'llm', 'generative ai', 'gen ai', 'large language',
+            'classification', 'regression', 'forecasting', 'computer vision',
+            'etl', 'web scraping', 'api', 'data cleaning', 'data processing'
+        ]
+        if any(keyword in question_lower for keyword in specific_tool_keywords):
+            return "skills_specific"
+
+        # Generic skills question
+        generic_skill_keywords = ['skill', 'skills', 'technology', 'technologies', 'programming', 'language', 'tool', 'framework', 'technical']
+        if any(keyword in question_lower for keyword in generic_skill_keywords):
+            return "skills"
         
-        elif any(word in question_lower for word in ["projects", "github", "repository", "code"]):
-            return f"Sarah's projects and GitHub work:\n\n{context}"
+        # Experience-related keywords
+        experience_keywords = ['experience', 'background', 'resume', 'education', 'career', 'history']
+        if any(keyword in question_lower for keyword in experience_keywords):
+            return "experience"
         
-        elif any(word in question_lower for word in ["education", "degree", "university", "study"]):
-            return f"Sarah's educational background:\n\n{context}"
+        return "general"
+    
+    def _get_projects_data(self, question):
+        """Get project data with multiple strategies"""
+        # Strategy 1: Direct project search
+        results = self.rag.search_by_type(question, "project", 6)
         
-        elif any(word in question_lower for word in ["about", "who", "background", "bio"]):
-            return f"About Sarah:\n\n{context}"
+        # Strategy 2: If insufficient results, get all projects
+        if not results['documents'][0] or len(results['documents'][0]) < 3:
+            all_projects = self.rag.get_all_projects()
+            if all_projects['documents'][0]:
+                return all_projects
         
-        elif any(word in question_lower for word in ["contact", "email", "reach", "linkedin"]):
-            return f"Contact Information:\n📧 Email: {self.email}\n💼 LinkedIn: Connect with Sarah on LinkedIn\n\nAdditional info from portfolio:\n{context}"
+        # Strategy 3: Fallback to general search
+        if not results['documents'][0]:
+            return self.rag.search(f"projects work {question}", n_results=8)
         
-        else:
-            return f"Here's what I found in Sarah's portfolio:\n\n{context}"
+        return results
+    
+    def _get_skills_data(self, question):
+        """Get skills data with multiple strategies"""
+        # Strategy 1: Direct skills search
+        results = self.rag.search_by_type(question, "skills", 6)
+        
+        # Strategy 2: If insufficient results, get all skills
+        if not results['documents'][0] or len(results['documents'][0]) < 2:
+            all_skills = self.rag.get_all_skills()
+            if all_skills['documents'][0]:
+                return all_skills
+        
+        # Strategy 3: Fallback to general search
+        if not results['documents'][0]:
+            return self.rag.search(f"skills technology {question}", n_results=8)
+        
+        return results
+    
+    def _get_github_data(self, question):
+        """Get GitHub-specific data"""
+        # Search for GitHub repositories and profile
+        github_results = self.rag.search(question, n_results=10)
+        
+        # Filter for GitHub-related content
+        if github_results['documents'][0]:
+            filtered_docs = []
+            filtered_metas = []
+            
+            for doc, meta in zip(github_results['documents'][0], github_results['metadatas'][0]):
+                if meta.get('source', '').startswith('github') or 'github' in doc.lower():
+                    filtered_docs.append(doc)
+                    filtered_metas.append(meta)
+            
+            if filtered_docs:
+                return {'documents': [filtered_docs], 'metadatas': [filtered_metas]}
+        
+        # Fallback to general search
+        return self.rag.search(f"github repository {question}", n_results=8)
+    
+    def _get_experience_data(self, question):
+        """Get experience and background data"""
+        # Search for resume and background information
+        results = self.rag.search(question, n_results=8)
+        
+        # Prioritize formal background documents
+        if results['documents'][0]:
+            prioritized_docs = []
+            prioritized_metas = []
+            other_docs = []
+            other_metas = []
+            
+            for doc, meta in zip(results['documents'][0], results['metadatas'][0]):
+                if meta.get('type') in ['formal_background', 'personal_background']:
+                    prioritized_docs.append(doc)
+                    prioritized_metas.append(meta)
+                else:
+                    other_docs.append(doc)
+                    other_metas.append(meta)
+            
+            # Combine prioritized first, then others
+            final_docs = prioritized_docs + other_docs[:5]
+            final_metas = prioritized_metas + other_metas[:5]
+            
+            return {'documents': [final_docs], 'metadatas': [final_metas]}
+        
+        return results
+    
+    def _fallback_retrieval(self, question):
+        """Fallback when no relevant documents found"""
+        # Try broader search terms
+        fallback_queries = [
+            "Sarah portfolio projects skills",
+            "data science machine learning",
+            "programming experience background"
+        ]
+        
+        for fallback_query in fallback_queries:
+            results = self.rag.search(fallback_query, n_results=5)
+            if results['documents'][0]:
+                return results['documents'][0]
+        
+        # Last resort: return summary
+        return [self.rag.get_summary()]
+    
+    def _should_add_contact(self, question):
+        """Check if contact info should be added"""
+        contact_keywords = ['contact', 'email', 'reach', 'linkedin', 'connect', 'hire', 'work']
+        return any(keyword in question.lower() for keyword in contact_keywords)
     
     def chat(self):
         """Interactive chat interface"""
         print("\n" + "="*50)
-        print("🤖 Sarah's Portfolio Assistant")
+        print("Sarah's Portfolio Assistant")
         print("="*50)
         print("Ask me anything about Sarah's background, skills, projects, or experience!")
         print("Type 'quit', 'exit', or 'bye' to end the conversation")
         print("Type 'reload' to refresh the data")
+        print("Type 'debug <query>' to see search results")
         print("-"*50 + "\n")
         
         while True:
@@ -83,25 +216,30 @@ Feel free to reach out directly for any specific questions!"""
                     continue
                     
                 if question.lower() in ['quit', 'exit', 'bye']:
-                    print("\n👋 Thank you for using Sarah's Portfolio Assistant! Goodbye!")
+                    print("\nGoodbye!")
                     break
                 
                 if question.lower() == 'reload':
-                    print("🔄 Reloading portfolio data...")
+                    print("Reloading portfolio data...")
                     self.rag.reload_data()
-                    print("✅ Data reloaded successfully!")
+                    print("Data reloaded successfully!")
                     continue
                 
-                print("\n🤖 Assistant:", end=" ")
+                if question.lower().startswith('debug '):
+                    debug_query = question[6:].strip()
+                    self.rag.debug_search(debug_query)
+                    continue
+                
+                print("\nAssistant:", end=" ")
                 answer = self.answer_question(question)
                 print(f"{answer}\n")
                 print("-"*50)
                 
             except KeyboardInterrupt:
-                print("\n\n👋 Goodbye!")
+                print("\n\nGoodbye!")
                 break
             except Exception as e:
-                print(f"\n❌ Sorry, I encountered an error: {e}")
+                print(f"\nSorry, I encountered an error: {e}")
                 print("Please try asking your question again.\n")
 
 def main():
