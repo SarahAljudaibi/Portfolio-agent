@@ -323,15 +323,11 @@
                     responseArea.innerHTML = `<p><strong>Q:</strong> ${question}</p><br><p><strong>A:</strong> ${data.response}</p>`;
                 }
                 
-                responseArea.style.display = 'block';
-<<<<<<< HEAD
-                responseArea.scrollTop = 0;
-=======
-                responseArea.scrollTop = responseArea.scrollHeight;
->>>>>>> 3f06faf90961fbd985fb705888e5af25ce7d589e
+           responseArea.style.display = 'block';
+responseArea.scrollTop = 0;
                 
-                // Clear input
-                input.value = '';
+// Clear input
+input.value = '';
                 
             } catch (error) {
                 thinking.style.display = 'none';
